@@ -34,6 +34,6 @@ def pago_compensacion():
     logging.info("Compensación de pago (reembolso) REALIZADA (Status 200)")
     return flask.jsonify({"mensaje": "Compensación de pago (reembolso) realizada"}), 200
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     # Corre puerto 5002
-    app.run(port=5002, debug=True)
+    app.run(host="0.0.0.0", port=5002, debug=True)
